@@ -1,0 +1,71 @@
+@reference "tailwindcss";
+
+.header {
+  @apply p-4;
+
+  .container {
+    @apply flex justify-between items-center;
+  }
+
+  .logo {
+    @apply flex items-center gap-2;
+
+    .icon {
+      @apply text-emerald-500 text-lg;
+    }
+
+    span {
+      @apply text-lg font-bold;
+    }
+  }
+
+  nav ul {
+    @apply flex items-center gap-2;
+
+    a {
+      @apply font-medium hover:text-emerald-500;
+    }
+  }
+
+  .menu-btn {
+    @apply hidden;
+  }
+}
+
+.menu {
+  @apply bg-white p-4 fixed top-0 right-[-300px] h-screen flex flex-col gap-2 w-[300px] border-l duration-200;
+
+  div {
+    @apply flex flex-row-reverse items-center;
+
+    .menu-close {
+      @apply text-2xl cursor-pointer;
+    }
+  }
+
+  nav ul {
+    @apply flex flex-col gap-4;
+
+    a {
+      @apply font-medium text-black hover:text-emerald-500 duration-200;
+    }
+  }
+}
+
+.menu {
+  @apply hidden;
+}
+
+@media (max-width: 680px) {
+  .header nav {
+    @apply hidden;
+  }
+
+  .header .menu-btn {
+    @apply flex;
+  }
+
+  .menu {
+    @apply flex;
+  }
+}

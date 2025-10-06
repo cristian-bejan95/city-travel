@@ -1,0 +1,42 @@
+@reference "tailwindcss";
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "city1 city2"
+    "city1 city3";
+  @apply gap-4 container mx-auto my-4;
+
+  .city:nth-child(1) {
+    grid-area: city1;
+  }
+  .city:nth-child(2) {
+    grid-area: city2;
+  }
+  .city:nth-child(3) {
+    grid-area: city3;
+  }
+
+  .city {
+    @apply flex flex-col h-full;
+
+    img {
+      @apply w-full h-full rounded-lg mb-2 object-cover;
+    }
+
+    h1 {
+      @apply text-xl font-bold;
+    }
+
+    p {
+      @apply font-medium flex items-center gap-2;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    @apply flex flex-col gap-4 p-2;
+  }
+}
