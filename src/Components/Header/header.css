@@ -20,10 +20,10 @@
   }
 
   nav ul {
-    @apply flex items-center gap-2;
+    @apply flex items-center gap-5 duration-200;
 
     a {
-      @apply font-medium hover:text-emerald-500;
+      @apply font-medium hover:text-emerald-500 duration-200;
     }
   }
 
