@@ -1,8 +1,9 @@
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function City({ city }) {
   return (
-    <div className="city">
+    <Link to={`/city/${city.slug}`} className="city">
       <img src={city.images[0]} alt="City image" />
       <div className="flex items-center gap-2">
         <h1>
@@ -13,7 +14,7 @@ function City({ city }) {
           {city.rating}
         </p>
       </div>
-    </div>
+    </Link>
   );
 }
 

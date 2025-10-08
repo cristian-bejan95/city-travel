@@ -10,7 +10,7 @@ export const routes = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/city",
+    path: "/city/:slug",
     element: <City />,
   },
   {

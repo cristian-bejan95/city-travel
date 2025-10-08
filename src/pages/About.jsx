@@ -5,7 +5,9 @@ function About() {
     <>
       <Header />
       <main>
-        <h1 className="text-3xl font-bold">About</h1>
+        <div className="container mx-auto">
+          <h1 className="text-3xl font-bold">About</h1>
+        </div>
       </main>
     </>
   );
