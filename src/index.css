@@ -18,3 +18,11 @@
     transform: rotate(1turn);
   }
 }
+
+.city-swiper {
+  @apply h-[400px] w-full rounded-lg;
+
+  img {
+    @apply h-full w-full object-cover object-center;
+  }
+}

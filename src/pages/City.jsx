@@ -30,7 +30,7 @@ function City() {
       <main>
         <div className="container mx-auto p-4">
           {city ? (
-            <div>
+            <div className="flex flex-col gap-4 items-start">
               <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
@@ -40,7 +40,7 @@ function City() {
                 }}
                 navigation={true}
                 modules={[Pagination, Navigation]}
-                className="mySwiper"
+                className="city-swiper"
               >
                 {city.images.map((image) => (
                   <SwiperSlide>
@@ -48,21 +48,26 @@ function City() {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <h1>
-                {city.city} {city.country}
+              <h1 className="text-2xl font-bold">
+                {city.city}, {city.country}
               </h1>
-              <p>
+              <p className="flex gap-2 items-center p-2 bg-gray-100 rounded-lg font-medium text-lg">
                 <FaStar className="text-yellow-500" />
                 {city.rating}
               </p>
-              <p>Description</p>
-              <p>{city.description}</p>
-              {city.placesToVisit.map((place, idx) => (
-                <div key={idx}>
-                  <img src={place.pictures} height="200px" alt={place.name} />
-                  <h2>{place.name}</h2>
-                </div>
-              ))}
+              <p className="font-medium">{city.description}</p>
+              <div className="flex gap-4">
+                {city.placesToVisit.map((place, idx) => (
+                  <div className="w-[250px] flex flex-col gap-1" key={idx}>
+                    <img
+                      className="h-[200px] w-full rounded-lg"
+                      src={place.pictures}
+                      alt={place.name}
+                    />
+                    <h2 className="font-medium text-lg">{place.name}</h2>
+                  </div>
+                ))}
+              </div>
             </div>
           ) : (
             <div className="w-full h-full flex items-center justify-center">
