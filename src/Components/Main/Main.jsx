@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Hero from "../Hero/Hero";
+import Catalog from "../Catalog/Catalog";
 
 function Main() {
   const [cities, setCities] = useState(null);
@@ -13,7 +14,17 @@ function Main() {
       .then((res) => setCities(res.data));
   }, []);
 
-  return <main>{cities && <Hero cities={cities.slice(0, 3)} />}</main>;
+  return (
+    <main>
+      {cities && (
+        <>
+          {" "}
+          <Hero cities={cities.slice(0, 3)} />
+          <Catalog cities={cities} />
+        </>
+      )}
+    </main>
+  );
 }
 
 export default Main;

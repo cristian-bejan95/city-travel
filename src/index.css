@@ -20,7 +20,7 @@
 }
 
 .city-swiper {
-  @apply h-[400px] w-full rounded-lg;
+  @apply h-[550px] w-full rounded-lg;
 
   img {
     @apply h-full w-full object-cover object-center;

@@ -19,7 +19,7 @@
   }
 
   .city {
-    @apply flex flex-col h-full;
+    @apply flex flex-col items-start;
 
     img {
       @apply w-full h-full rounded-lg mb-2 object-cover;

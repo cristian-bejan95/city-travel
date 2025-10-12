@@ -48,14 +48,22 @@ function City() {
                   </SwiperSlide>
                 ))}
               </Swiper>
-              <h1 className="text-2xl font-bold">
+              <h1 className="text-5xl font-bold text-teal-950">
                 {city.city}, {city.country}
               </h1>
+              <p className="font-medium text-xl text-neutral-600">
+                {city.description}
+              </p>
+              <p className="px-4 py-2 bg-gray-100 rounded-xl font-medium">
+                {city.category}
+              </p>
+              <p className="text-2xl font-medium">
+                Avg. hotel price: {city.avgHotelPricePerNight}
+              </p>
               <p className="flex gap-2 items-center p-2 bg-gray-100 rounded-lg font-medium text-lg">
-                <FaStar className="text-yellow-500" />
+                <FaStar className="text-emerald-500" />
                 {city.rating}
               </p>
-              <p className="font-medium">{city.description}</p>
               <div className="flex gap-4">
                 {city.placesToVisit.map((place, idx) => (
                   <div className="w-[250px] flex flex-col gap-1" key={idx}>
